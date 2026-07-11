@@ -1,0 +1,116 @@
+# ffms2_fuzzer.dict — tokens for the media containers FFMS_CreateIndexer parses
+# (ISOBMFF / MP4 / QuickTime MOV, Matroska / WebM EBML). These are the box/atom
+# four-CCs and element IDs ffms2 hands to FFmpeg's demuxers while indexing.
+
+# ── ISOBMFF / MP4 / MOV top-level + structural boxes ──────────────────────────
+"ftyp"
+"moov"
+"mdat"
+"free"
+"skip"
+"wide"
+"pnot"
+"trak"
+"mvhd"
+"tkhd"
+"edts"
+"elst"
+"mdia"
+"mdhd"
+"hdlr"
+"minf"
+"vmhd"
+"smhd"
+"dinf"
+"dref"
+"stbl"
+"stsd"
+"stts"
+"ctts"
+"stss"
+"stsc"
+"stsz"
+"stco"
+"co64"
+"sgpd"
+"sbgp"
+"udta"
+"meta"
+"keys"
+"ilst"
+"mvex"
+"trex"
+"moof"
+"mfhd"
+"traf"
+"tfhd"
+"tfdt"
+"trun"
+"sidx"
+"saiz"
+"saio"
+"senc"
+"uuid"
+
+# ── ISOBMFF brands (appear after ftyp) ────────────────────────────────────────
+"isom"
+"iso2"
+"iso4"
+"iso5"
+"iso6"
+"mp41"
+"mp42"
+"avc1"
+"qt  "
+"M4V "
+"M4A "
+"dash"
+"msnv"
+
+# ── Sample-entry / codec four-CCs ─────────────────────────────────────────────
+"hev1"
+"hvc1"
+"mp4v"
+"mp4a"
+"esds"
+"avcC"
+"hvcC"
+"pasp"
+"colr"
+"clap"
+"btrt"
+
+# ── Matroska / WebM EBML element-ID bytes ─────────────────────────────────────
+# EBML header magic
+"\x1a\x45\xdf\xa3"
+# Segment
+"\x18\x53\x80\x67"
+# SeekHead
+"\x11\x4d\x9b\x74"
+# Info
+"\x15\x49\xa9\x66"
+# Tracks
+"\x16\x54\xae\x6b"
+# Cluster
+"\x1f\x43\xb6\x75"
+# Cues
+"\x1c\x53\xbb\x6b"
+# Tags
+"\x12\x54\xc3\x67"
+# TrackEntry
+"\xae"
+# SimpleBlock
+"\xa3"
+# BlockGroup
+"\xa0"
+# Timecode
+"\xe7"
+"matroska"
+"webm"
+
+# ── EBML doctype strings ──────────────────────────────────────────────────────
+"V_VP9"
+"V_VP8"
+"V_MPEG4/ISO/AVC"
+"A_OPUS"
+"A_VORBIS"

@@ -1,0 +1,9 @@
+project: ffms2
+target: ffms2_fuzzer
+cmds:
+  - cmd: /mayhem/ffms2_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/ffms2_fuzzer.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ffms2_fuzzer/testsuite
